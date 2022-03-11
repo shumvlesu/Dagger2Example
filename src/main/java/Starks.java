@@ -1,12 +1,24 @@
+import other.Allies;
+import other.IronBank;
+
 public class Starks implements House {
+  private Allies allies;
+  private IronBank bank;
+
+  public Starks(Allies allies, IronBank bank) {
+    this.bank = bank;
+    this.allies = allies;
+  }
+
   @Override
   public void prepareForWar() {
     //что-то происходит
-    System.out.println(this.getClass().getSimpleName()+" prepared for war");
+    System.out.println(this.getClass().getSimpleName() + " prepared for war");
   }
+
   @Override
   public void reportForWar() {
     //что-то происходит
-    System.out.println(this.getClass().getSimpleName()+" reporting..");
+    System.out.println(this.getClass().getSimpleName() + " reporting..");
   }
 }
